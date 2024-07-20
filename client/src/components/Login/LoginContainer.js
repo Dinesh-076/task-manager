@@ -15,7 +15,7 @@ function LoginContainer() {
         setError('');
 
         try {
-            const response = await fetch('http://localhost:4000/api/auth/login', {
+            const response = await fetch('https://task-manager-nfd8.onrender.com/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
@@ -38,7 +38,7 @@ function LoginContainer() {
     };
 
     const handleGoogleLogin = () => {
-        window.location.href = 'http://localhost:4000/auth/google';
+        window.location.href = 'https://task-manager-nfd8.onrender.com/auth/google';
     };
 
     return (
