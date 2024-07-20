@@ -1,0 +1,44 @@
+.task-controls {
+    display: flex;
+    flex-direction: column;
+    margin: 20px 0;
+    padding: 0 20px;
+  }
+  
+  
+  
+  .task-controls-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+.task-controls-right > div{
+  display: flex;
+  align-items: baseline;
+}
+
+  .task-controls-right label {
+    margin-right: 10px;
+    font-size: 16px;
+  }
+  
+  #search {
+    padding: 5px 10px;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  
+  #sort {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+  

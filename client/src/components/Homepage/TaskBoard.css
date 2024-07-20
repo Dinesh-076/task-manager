@@ -1,0 +1,82 @@
+/* TaskBoard.css */
+.task-board {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  gap: 20px; /* Add some space between columns */
+}
+
+.task-column {
+  flex: 1; /* Make columns take up equal space */
+  background-color: #f9f9f9;
+  padding: 25px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-column h2 {
+  background-color: #4285f4;
+  color: white;
+  padding: 10px;
+  border-radius: 3px;
+  margin: 0 -10px 15px -10px;
+  text-align: center;
+}
+
+.task-card {
+  background-color: #e0f7fa;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: grab;
+}
+
+.task-card:active{
+  opacity: 0.7;
+  border: 1px solid #111;
+}
+.task-card h3 {
+  margin: 5px 0 10px 0;
+  text-transform: capitalize;
+}
+
+.task-card-desc {
+  margin: 10px 0;
+  font-size: larger;
+}
+
+.task-card-date{
+  font-size: larger;
+  margin-top: 40px;
+}
+
+.task-card-buttons {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 10px;
+  gap: 15px;
+}
+
+.task-card-buttons button {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.btn-delete {
+  background-color: #ff4d4d;
+  color: white;
+}
+
+.btn-edit {
+  background-color: #4caf50;
+  color: white;
+}
+
+.btn-details {
+  background-color: #4285f4;
+  color: white;
+}
