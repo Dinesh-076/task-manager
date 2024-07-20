@@ -40,9 +40,9 @@ app.get('/auth/google',
   );
   
   app.get('/auth/google/callback',
-    passport.authenticate('google', { failureRedirect: 'https://task-manager-dinesh.netlify.app/login/login' }),
+    passport.authenticate('google', { failureRedirect: 'https://task-manager-dinesh.netlify.app/login' }),
     (req, res) => {
-      res.redirect('https://task-manager-dinesh.netlify.app/login/home');
+      res.redirect('https://task-manager-dinesh.netlify.app/home');
     }
 );
 
@@ -50,25 +50,25 @@ function ensureAuthenticated(req, res, next) {
   if (req.isAuthenticated()) {
     return next();
   }
-  res.redirect('https://task-manager-dinesh.netlify.app/login/login');
+  res.redirect('https://task-manager-dinesh.netlify.app/login');
 }
 
 app.get('/home', ensureAuthenticated, (req,res) => {
-  res.redirect('https://task-manager-dinesh.netlify.app/login/home');
+  res.redirect('https://task-manager-dinesh.netlify.app/home');
 })
 
 app.get('/home', (req, res) => {
     if (req.isAuthenticated()) {
-        res.redirect('https://task-manager-dinesh.netlify.app/login/home');
+        res.redirect('https://task-manager-dinesh.netlify.app/home');
     } else {
-        res.redirect('https://task-manager-dinesh.netlify.app/login/login');
+        res.redirect('https://task-manager-dinesh.netlify.app/login');
     }
 });
 
 // app.get('/logout', (req, res) => {
 //     req.logout((err) => {
 //         if (err) { return next(err); }
-//         res.redirect('https://task-manager-dinesh.netlify.app/login/login');
+//         res.redirect('https://task-manager-dinesh.netlify.app/login');
 //     });
 // });
 app.get('/logout', (req, res, next) => {
@@ -77,7 +77,7 @@ app.get('/logout', (req, res, next) => {
     req.session.destroy((err) => {
       if (err) { return next(err); }
       res.clearCookie('connect.sid'); // Clear the session cookie
-      res.redirect('https://task-manager-dinesh.netlify.app/login/login');
+      res.redirect('https://task-manager-dinesh.netlify.app/login');
     });
   });
 });
