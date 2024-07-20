@@ -24,7 +24,7 @@ function SignupContainer() {
     }
 
     try {
-      const response = await fetch("https://task-manager-nfd8.onrender.com/api/auth/register", {
+      const response = await fetch("https://task-manager-393ajfpq3-dinesh-ps-projects-8763556b.vercel.app/api/auth/register", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -50,7 +50,7 @@ function SignupContainer() {
   };
 
   const handleGoogleSignup = () => {
-    window.location.href = "https://task-manager-nfd8.onrender.com/auth/google";
+    window.location.href = "https://task-manager-393ajfpq3-dinesh-ps-projects-8763556b.vercel.app/auth/google";
   };
 
   return (
