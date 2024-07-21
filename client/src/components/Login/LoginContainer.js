@@ -15,7 +15,7 @@ function LoginContainer() {
         setError('');
 
         try {
-            const response = await fetch('https://task-manager-nfd8.onrender.com/auth/login', {
+            const response = await fetch('https://task-manager-nfd8.onrender.com/api/auth/login', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

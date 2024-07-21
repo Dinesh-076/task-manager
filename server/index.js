@@ -64,7 +64,7 @@ app.get('/home', (req, res) => {
     if (req.isAuthenticated()) {
         res.redirect('https://task-manager-dinesh.netlify.app/home');
     } else {
-        res.redirect('https://task-manager-dinesh.netlify.app/login');
+        res.redirect('https://task-manager-dinesh.netlify.app/home');
     }
 });
 
