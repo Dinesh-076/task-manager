@@ -49,22 +49,22 @@ app.get('/auth/google',
     }
 );
 
-function ensureAuthenticated(req, res, next) {
-  if (req.isAuthenticated()) {
-    return next();
-  }
-  res.redirect('https://task-manager-dinesh.netlify.app/login');
-}
+// function ensureAuthenticated(req, res, next) {
+//   if (req.isAuthenticated()) {
+//     return next();
+//   }
+//   res.redirect('https://task-manager-dinesh.netlify.app/login');
+// }
 
-app.get('/home', ensureAuthenticated, (req,res) => {
-  res.redirect('https://task-manager-dinesh.netlify.app/home');
-})
+// app.get('/home', ensureAuthenticated, (req,res) => {
+//   res.redirect('https://task-manager-dinesh.netlify.app/home');
+// })
 
 app.get('/home', (req, res) => {
     if (req.isAuthenticated()) {
         res.redirect('https://task-manager-dinesh.netlify.app/home');
     } else {
-        res.redirect('https://task-manager-dinesh.netlify.app/home');
+        res.redirect('https://task-manager-dinesh.netlify.app/login');
     }
 });
 

@@ -34,6 +34,7 @@ function SignupContainer() {
           lastName,
           email,
           password,
+          confirmPassword,
         }),
       });
 
