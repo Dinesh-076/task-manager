@@ -1,4 +1,3 @@
-/* TaskBoard.css */
 .task-board {
   display: flex;
   justify-content: space-between;
@@ -33,10 +32,11 @@
   cursor: grab;
 }
 
-.task-card:active{
+.task-card:active {
   opacity: 0.7;
   border: 1px solid #111;
 }
+
 .task-card h3 {
   margin: 5px 0 10px 0;
   text-transform: capitalize;
@@ -47,7 +47,7 @@
   font-size: larger;
 }
 
-.task-card-date{
+.task-card-date {
   font-size: larger;
   margin-top: 40px;
 }
@@ -79,4 +79,50 @@
 .btn-details {
   background-color: #4285f4;
   color: white;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .task-board {
+    flex-direction: column;
+  }
+
+  .task-column {
+    margin-bottom: 20px;
+  }
+
+  .task-card-buttons {
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .task-board {
+    padding: 10px;
+  }
+
+  .task-column {
+    padding: 15px;
+  }
+
+  .task-column h2 {
+    padding: 8px;
+  }
+
+  .task-card {
+    padding: 8px;
+  }
+
+  .task-card-desc, .task-card-date {
+    font-size: 14px;
+  }
+
+  .task-card-buttons {
+    gap: 5px;
+  }
+
+  .task-card-buttons button {
+    padding: 5px 8px;
+    font-size: 14px;
+  }
 }
