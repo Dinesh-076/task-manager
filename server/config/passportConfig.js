@@ -5,7 +5,7 @@ export default function(passport) {
   passport.use(new GoogleStrategy({
     clientID: process.env.GOOGLE_CLIENT_ID,
     clientSecret: process.env.GOOGLE_CLIENT_SECRET,
-    callbackURL: 'https://task-manager-393ajfpq3-dinesh-ps-projects-8763556b.vercel.app/auth/google/callback'
+    callbackURL: 'https://task-manager-nfd8.onrender.com/auth/google/callback'
   },
   async (token, tokenSecret, profile, cb) => {
     try {
